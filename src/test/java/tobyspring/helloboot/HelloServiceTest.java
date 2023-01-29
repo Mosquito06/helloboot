@@ -52,7 +52,7 @@ public class HelloServiceTest
     @Test
     void helloDecoratorService()
     {
-        HelloService decorator = new HelloDecorator( new SimpleHelloService(helloRepositoryStub) );
+        HelloService decorator = new HelloDecorator( name -> name );
 
         String ret = decorator.sayHello("Test");
 
